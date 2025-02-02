@@ -1,0 +1,25 @@
+{
+  "name": "playwright-bdd-ui-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rm -R -f dist/e2e/reports &&  rm -R -f allure-report && rm -R -f allure-results",
+    "e2e:smoke:tests": "npm run pretest && npx bddgen && npx playwright test --grep @smoke",
+    "e2e:tests:headed": "npm run pretest && npx bddgen && npx playwright test --headed",
+    "generate:allure:report": "npx allure generate allure-results && npm run posttest",
+    "posttest": "allure serve allure-results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.0",
+    "allure-commandline": "^2.32.0",
+    "allure-playwright": "^3.1.0",
+    "dotenv": "^16.4.7",
+    "fs-extra": "^11.3.0",
+    "playwright-bdd": "^8.1.0"
+  }
+}
