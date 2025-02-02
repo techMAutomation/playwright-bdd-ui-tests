@@ -10,7 +10,7 @@ Welcome to the Playwright BDD framework! This project helps you understand and e
 2. Open your terminal
 3. Clone the repository
     ```bash
-    git clone 
+    git clone https://github.com/techMAutomation/playwright-bdd-ui-tests.git
     ```
 4. Install dependencies:
     ```bash
